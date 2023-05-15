@@ -5,10 +5,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Simple E-commerce</title>
+  <title>Rauan's shop</title>
   <style media="screen">
     .footer{
       position: fixed;
+    }
+    .row{
+      dispay: flex;
+      justify-content:center;
+      align-items: center;
+      width:100%;
+    }
+    .column {
+      dispay: flex;
+      justify-content:center;
+      align-items: center;
+      float: left;
+      width: 50.3%;
+      height: 70%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+      text-align:center;
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+    
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+    }
+    
+    .container {
+      padding: 0 16px;
+    }
+    
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .title {
+      color: grey;
+    }
+    
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 500px;
+      margin-left:-650px
+    }
+    
+    .button:hover {
+      background-color: #555;
+    }
+    
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
     }
   </style>
 </head>
@@ -20,7 +87,58 @@
     {% include "ecom/navbar.html" %}
   {%endif%}
   <br><br><br>
-<h3 style="text-align:center;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </h3>
+<h3 style="text-align:center;">"We are 4 friends developers.Our goal to be the best e-commerce shop" </h3>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Gadil Rauan</h2>
+        <p class="title">CEO & Founder</p>
+        <p>senior ios developer</p>
+        <p>rauangadil5@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Bekzat Birlik</h2>
+        <p class="title">Director</p>
+        <p>senior ios developer</p>
+        <p>bake@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Aliturliyev Aidyn</h2>
+        <p class="title">Designer</p>
+        <p>senior backend developer</p>
+        <p>aidyn@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Nurbek Alikhan</h2>
+        <p class="title">Designer</p>
+        <p>senior backend developer</p>
+        <p>alikhan@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   {% include "ecom/footer.html" %}
 </body>
